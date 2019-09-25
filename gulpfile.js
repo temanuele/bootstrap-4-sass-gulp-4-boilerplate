@@ -84,7 +84,7 @@ gulp.task('css:minify', gulp.series('scss', function cssMinify() {
 // Minify Js
 gulp.task('js:minify', function () {
   return gulp.src([
-    './assets/js/app.js'
+    './assets/js/custom-javascript.js'
   ])
     .pipe(uglify())
     .pipe(rename({
@@ -115,7 +115,7 @@ gulp.task('dev', function browserDev(done) {
     browserSync.reload();
     done(); //Async callback for completion.
   }));
-  gulp.watch('assets/js/app.js', gulp.series('js:minify', function jsBrowserReload (done) {
+  gulp.watch('assets/js/custom-javascript.js', gulp.series('js:minify', function jsBrowserReload (done) {
     browserSync.reload();
     done();
   }));
