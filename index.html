@@ -43,10 +43,10 @@
                 <a class="nav-link disabled" href="#">Disabled</a>
             </li>
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
+        <!-- <form class="form-inline mt-2 mt-md-0">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i> Search </button>
-        </form>
+        </form> -->
     </div>
 </nav>
 
@@ -54,7 +54,7 @@
     <div class="container">
         <!--<h1 class="title glitch">Falchi Giochi</h1>-->
 
-        <h1 class="title glitch fade-medio" data-text="FALCHI GIOCHI">Falchi Giochi</h1>
+        <h1 class="glitch fade-medio" data-text="FALCHI GIOCHI">Falchi Giochi</h1>
         <h2 class="claim fade-lungo">cabinati Arcade, consolle arcade, flipper, calcio balilla, <br> jukebox, Tennis tavolo, biliardi</h2>
 
         
@@ -63,24 +63,74 @@
 
 <div class="w-100" style="height:650px;"></div> <!--STESSA ALTEZZA DI HERO PER IL FIXED-->
 
-<section class="bg-white py-5 d-flex align-items-center justify-content-center position-relative">
+<section class="bg-white py-5 position-relative">
 
     <div class="top-arrow d-flex align-items-end justify-content-center">
-     <a class="floating fade-classico" href=""><img src="assets/img/arrow.svg" alt=""></a>
-        
+         <a class="floating fade-classico" href=""><img src="assets/img/arrow.svg" alt=""></a>
     </div>
 
-    <div class="container" style="padding-bottom: 600px;">
-        <h2 class="text-center fade-veloce mb-5">Button</h2>
-        <a class="button fade-veloce" href="">Contattaci</a>
+    <div class="container">
 
-        <div class="form-newsletter d-flex mt-5">
-            <input class="bg-gray fade-veloce" type="text" id="name" name="firstname" placeholder="Inserisci la tua mail">
-            <div class="container-subscribe align-self-center fade-subscribe">
-                <input  type="submit" value="Invia" name="Subscribe">
+            <h2 class="title gray-text text-center fade-veloce mb-5">Cabinati</h2>
+            
+            <div class="gradient-button fade-veloce-bottom d-flex justify-content-center">
+                <a class="button" href="">Contattaci</a>
+            </div>
+           
+
+    </div>
+</section>
+
+<section class="py-5 bg-gradient">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h3 class="secondary-title white-text text-center mb-4 fade-veloce">Noleggio disponibile in tutta Italia</h3>
+                <p class="paragraph text-center white-text fade-veloce">Lavoriamo nel settore dell’intrattenimento da oltre 60 anni. Tutto è cominciato nel 
+                    ’56 con la gestione di una sala giochi sul lungo mare di Ostia, la prima in tutto il Lazio. Da lì, 
+                    dopo qualche anno, molti sacrifici e tanta dedizione abbiamo cominciato a noleggiare i primi 
+                    Calciobalilla, aprendo la strada a quello che oggi è la nostra attività: vendita, restaurazione 
+                    e noleggio di Flipper, Calciobalilla, Jukebox, Cabinati Arcade realizzati su misura del cliente, 
+                    Tennis da tavolo e molto altro. Grazie all’esperienza acquisita garantiamo la qualità del made in Italy,
+                    innovazione tecnologica, design ergonomici e fedeli ai modelli che hanno fatto la storia e una grande 
+                    esperienza nel settore.
+                </p>
+            </div>
+            
+            <div class="rounded-form d-flex m-auto pt-5">
+                <input class="bg-gray fade-veloce-bottom" type="text" id="name" name="firstname" placeholder="Inserisci la tua mail">
+                <div class="container-subscribe align-self-center fade-subscribe">
+                    <input  type="submit" value="Invia" name="Subscribe">
+                </div>
             </div>
         </div>
     </div>
+</section>
+
+<section class="py-5 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-8 offset-2">
+                    <h3 class="secondary-title gray-text text-center mb-4 fade-veloce">Noleggio disponibile in tutta Italia</h3>
+                    <p class="paragraph text-center gray-text fade-veloce">Lavoriamo nel settore dell’intrattenimento da oltre 60 anni. Tutto è cominciato nel 
+                        ’56 con la gestione di una sala giochi sul lungo mare di Ostia, la prima in tutto il Lazio. Da lì, 
+                        dopo qualche anno, molti sacrifici e tanta dedizione abbiamo cominciato a noleggiare i primi 
+                        Calciobalilla, aprendo la strada a quello che oggi è la nostra attività: vendita, restaurazione 
+                        e noleggio di Flipper, Calciobalilla, Jukebox, Cabinati Arcade realizzati su misura del cliente, 
+                        Tennis da tavolo e molto altro. Grazie all’esperienza acquisita garantiamo la qualità del made in Italy,
+                        innovazione tecnologica, design ergonomici e fedeli ai modelli che hanno fatto la storia e una grande 
+                        esperienza nel settore.
+                    </p>
+                </div>
+                
+                <div class="rounded-form d-flex m-auto pt-5">
+                    <input class="bg-gray fade-veloce-bottom" type="text" id="name" name="firstname" placeholder="Inserisci la tua mail">
+                    <div class="container-subscribe align-self-center fade-subscribe">
+                        <input  type="submit" value="Invia" name="Subscribe">
+                    </div>
+                </div>
+            </div>
+        </div>
 </section>
 
 
@@ -107,11 +157,16 @@
     //ScrollReveal().reveal('.fade-veloce');
     // ScrollReveal().reveal('.fade-medio', { delay: 600 });
 
-    ScrollReveal().reveal('.fade-logo-infografica', { delay: 800 });
     ScrollReveal().reveal('.fade-classico', { delay: 800 });
 
     ScrollReveal().reveal('.fade-veloce', { 
       origin: 'top',
+      distance: '10px',
+      delay: 600,
+      duration: 1000
+      });
+      ScrollReveal().reveal('.fade-veloce-bottom', { 
+      origin: 'bottom',
       distance: '10px',
       delay: 600,
       duration: 1000

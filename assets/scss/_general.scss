@@ -3,9 +3,72 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  .navbar {
+    padding: 1.5rem 1rem;
+  }
   
-body {
-    background-color: $bg-color;
+section {
+    position: relative;
+    &.bg-gradient {
+        background: $primary-gradient;
+    }
+    &.bg-white {
+        background: $white;
+    }
+    &.bg-gray-light {
+        background: $gray-light;
+    }
+    .title {
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        letter-spacing: 3px;
+        &:after {
+            content: '';
+            display: block;
+            width: 30px;
+            height: 3px;
+            margin: 0 auto;
+        }
+        &.white-text {
+            color:$white;
+            &:after {
+                background-color: $white;
+            }
+        }
+        &.gray-text {
+            color:$gray-dark;
+            &:after {
+                background-color: $gray-dark;
+            }
+        }
+    }
+    .secondary-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        letter-spacing: 1px;
+        &.white-text {
+            color:$white;
+        }
+        &.gray-text {
+            color:$gray-dark;
+        }
+    }
+    .paragraph {
+        font-family: 'Poppins', sans-serif;
+        line-height: 26px;
+        font-size: 15px;
+        font-weight: 500;
+        &.white-text {
+            color:$gray-light;
+        }
+        &.gray-text {
+            color:$gray-medium;
+        }
+    }
 }
 
 .hero {
@@ -16,14 +79,7 @@ body {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     position: relative;
-    .title {
-        color:$white;
-        text-transform: uppercase;
-        font-family: 'Poppins', sans-serif;
-        font-weight: 800;
-        font-size: 80px;
-        letter-spacing: 5px;
-    }
+    
     .claim {
         color:$white;
         text-transform: uppercase;
@@ -78,34 +134,37 @@ body {
 }
 
 // BUTTON GRADINET
-    a {
-        &.button {
-            padding: 12px 35px;
-            background:  $primary-gradient;
-            display: inline-block;
-            border-radius: 35px;
-            color: $white;
-            text-transform: uppercase;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-            letter-spacing: 2px;
-            -webkit-box-shadow: 0px 0px 0px 0px rgba(194, 21, 0, 0.25);
-            -moz-box-shadow: 0px 0px 0px 0px rgba(194, 21, 0, 0.25);
-            box-shadow: 0px 0px 0px 0px rgba(194, 21, 0, 0.25);
-            transition: all .2s ease-in-out;
-            &:hover {
-                text-decoration: none;
-                -webkit-box-shadow: 0px 11px 26px -10px rgba(194, 21, 0, 0.25);
-                -moz-box-shadow: 0px 11px 26px -10px rgba(194, 21, 0, 0.25);
-                box-shadow: 0px 11px 26px -10px rgba(194, 21, 0, 0.25);
-                background: $primary-gradient-hover;
+
+    .gradient-button {
+        a {
+            &.button {
+                padding: 12px 35px;
+                background:  $primary-gradient;
+                display: inline-block;
+                border-radius: 35px;
+                color: $white;
+                text-transform: uppercase;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                letter-spacing: 2px;
+                -webkit-box-shadow: 0px 0px 0px 0px rgba(194, 21, 0, 0.25);
+                -moz-box-shadow: 0px 0px 0px 0px rgba(194, 21, 0, 0.25);
+                box-shadow: 0px 0px 0px 0px rgba(194, 21, 0, 0.25);
+                transition: all .2s ease-in-out;
+                &:hover {
+                    text-decoration: none;
+                    -webkit-box-shadow: 0px 11px 26px -10px rgba(194, 21, 0, 0.25);
+                    -moz-box-shadow: 0px 11px 26px -10px rgba(194, 21, 0, 0.25);
+                    box-shadow: 0px 11px 26px -10px rgba(194, 21, 0, 0.25);
+                    background: $primary-gradient-hover;
+                }
             }
+            
         }
-        
     }
 
-
-    .form-newsletter {
+    
+    .rounded-form {
         width: 100%;
         max-width: 600px;
         position: relative;
@@ -147,6 +206,9 @@ body {
                     letter-spacing: 2px;
                     font-size: 14px;
                 }
+            }
+            &:focus {
+                outline: 0px;
             }
         }
         .container-subscribe {

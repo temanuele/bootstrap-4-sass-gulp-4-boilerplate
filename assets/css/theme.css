@@ -10553,8 +10553,86 @@ a.text-dark:hover, a.text-dark:focus {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  background-color: red;
+.navbar {
+  padding: 1.5rem 1rem;
+}
+
+section {
+  position: relative;
+}
+
+section.bg-gradient {
+  background: -webkit-linear-gradient(107deg, #C21500, #8A2387);
+}
+
+section.bg-white {
+  background: #ffffff;
+}
+
+section.bg-gray-light {
+  background: #f9f9f9;
+}
+
+section .title {
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+section .title:after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 0 auto;
+}
+
+section .title.white-text {
+  color: #ffffff;
+}
+
+section .title.white-text:after {
+  background-color: #ffffff;
+}
+
+section .title.gray-text {
+  color: #1D1D1D;
+}
+
+section .title.gray-text:after {
+  background-color: #1D1D1D;
+}
+
+section .secondary-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+section .secondary-title.white-text {
+  color: #ffffff;
+}
+
+section .secondary-title.gray-text {
+  color: #1D1D1D;
+}
+
+section .paragraph {
+  font-family: 'Poppins', sans-serif;
+  line-height: 26px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+section .paragraph.white-text {
+  color: #f9f9f9;
+}
+
+section .paragraph.gray-text {
+  color: #A2A2A2;
 }
 
 .hero {
@@ -10565,15 +10643,6 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   position: relative;
-}
-
-.hero .title {
-  color: #ffffff;
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 800;
-  font-size: 80px;
-  letter-spacing: 5px;
 }
 
 .hero .claim {
@@ -10648,7 +10717,7 @@ body {
   width: 30px;
 }
 
-a.button {
+.gradient-button a.button {
   padding: 12px 35px;
   background: -webkit-linear-gradient(107deg, #C21500, #8A2387);
   display: inline-block;
@@ -10664,26 +10733,26 @@ a.button {
   transition: all .2s ease-in-out;
 }
 
-a.button:hover {
+.gradient-button a.button:hover {
   text-decoration: none;
   -webkit-box-shadow: 0px 11px 26px -10px rgba(194, 21, 0, 0.25);
   box-shadow: 0px 11px 26px -10px rgba(194, 21, 0, 0.25);
   background: -webkit-linear-gradient(30deg, #8A2387, #C21500);
 }
 
-.form-newsletter {
+.rounded-form {
   width: 100%;
   max-width: 600px;
   position: relative;
   font-family: 'Poppins', sans-serif;
 }
 
-.form-newsletter input {
+.rounded-form input {
   border-radius: 35px;
   border: none;
 }
 
-.form-newsletter input[type="text"] {
+.rounded-form input[type="text"] {
   background-color: #ffffff;
   width: 100%;
   padding: 15px 35px;
@@ -10694,7 +10763,7 @@ a.button:hover {
   box-shadow: 0px 7px 26px -5px rgba(0, 0, 0, 0.1);
 }
 
-.form-newsletter input[type="text"]::-webkit-input-placeholder {
+.rounded-form input[type="text"]::-webkit-input-placeholder {
   color: #A2A2A2;
   text-transform: uppercase;
   font-weight: 500;
@@ -10702,7 +10771,7 @@ a.button:hover {
   font-size: 12px;
 }
 
-.form-newsletter input[type="text"]::-moz-placeholder {
+.rounded-form input[type="text"]::-moz-placeholder {
   color: #A2A2A2;
   text-transform: uppercase;
   font-weight: 500;
@@ -10710,7 +10779,7 @@ a.button:hover {
   font-size: 12px;
 }
 
-.form-newsletter input[type="text"]::-ms-input-placeholder {
+.rounded-form input[type="text"]::-ms-input-placeholder {
   color: #A2A2A2;
   text-transform: uppercase;
   font-weight: 500;
@@ -10718,7 +10787,7 @@ a.button:hover {
   font-size: 12px;
 }
 
-.form-newsletter input[type="text"]::placeholder {
+.rounded-form input[type="text"]::placeholder {
   color: #A2A2A2;
   text-transform: uppercase;
   font-weight: 500;
@@ -10726,7 +10795,7 @@ a.button:hover {
   font-size: 12px;
 }
 
-.form-newsletter input[type="submit"] {
+.rounded-form input[type="submit"] {
   background: -webkit-linear-gradient(107deg, #C21500, #8A2387);
   width: auto;
   color: #ffffff;
@@ -10735,28 +10804,38 @@ a.button:hover {
   transition: all .2s ease-in-out;
 }
 
-.form-newsletter input[type="submit"]:hover {
+.rounded-form input[type="submit"]:hover {
   text-decoration: none;
   background: -webkit-linear-gradient(30deg, #8A2387, #C21500);
 }
 
-.form-newsletter input[type="submit"][value="Invia"] {
+.rounded-form input[type="submit"][value="Invia"] {
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
   font-size: 14px;
 }
 
-.form-newsletter .container-subscribe {
+.rounded-form input:focus {
+  outline: 0px;
+}
+
+.rounded-form .container-subscribe {
   position: absolute;
   right: 7px;
 }
 
-.title.glitch {
+.glitch {
   animation: glitch-skew 1s infinite linear alternate-reverse;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 80px;
+  letter-spacing: 5px;
 }
 
-.title.glitch:before {
+.glitch:before {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -10774,7 +10853,7 @@ a.button:hover {
   animation: glitch-anim 5s infinite linear alternate-reverse;
 }
 
-.title.glitch:after {
+.glitch:after {
   content: attr(data-text);
   position: absolute;
   top: 0;
